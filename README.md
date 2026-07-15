@@ -1,6 +1,6 @@
 # Fontaid
 
-A simple Windows desktop app that installs fonts straight from ZIP archives —
+A simple Windows desktop app that installs fonts straight from ZIP archives,
 no more unzip → open folder → select fonts → install one-by-one.
 
 ## What it does
@@ -10,20 +10,20 @@ no more unzip → open folder → select fonts → install one-by-one.
 2. You choose **OpenType (.otf)**, **TrueType (.ttf)**, or **Both**.
 3. Click **Install Fonts**. Fontaid extracts the zips, filters to the type you
    picked, copies the matching font files into your personal Windows font
-   folder, registers them, and refreshes the font cache — all without an
+   folder, registers them, and refreshes the font cache, all without an
    admin/UAC prompt.
 4. New fonts appear right away in apps like Word, Photoshop, Illustrator, etc.
    (some apps may need a restart to see them).
 
 Fonts are installed **for your Windows user account only** (not system-wide for
 all users on the PC). That's what lets it run without admin rights and without
-interrupting your workflow — it's the same mechanism Windows itself uses when
+interrupting your workflow. It's the same mechanism Windows itself uses when
 you right-click a font file and choose "Install."
 
 ## Requirements
 
 - Windows 10 or 11
-- Python 3.9+ (from [python.org](https://python.org) — check "Add to PATH" during install)
+- Python 3.9+ (from [python.org](https://python.org). Check "Add to PATH" during install)
 - `tkinter` — included with the standard Python Windows installer by default
 
 Optional but recommended, for accurate font names in the install list:
@@ -32,7 +32,7 @@ Optional but recommended, for accurate font names in the install list:
 pip install fonttools
 ```
 
-Without `fonttools`, Fontaid still installs fonts correctly — it just falls
+Without `fonttools`, Fontaid still installs fonts correctly. it just falls
 back to naming them from the filename instead of reading the font's real name.
 
 ## Easiest setup: get a real fontaid.exe on your Desktop
@@ -40,13 +40,13 @@ back to naming them from the filename instead of reading the font's real name.
 1. Make sure `fontaid.py` and `Install Fontaid.bat` are in the **same folder**.
 2. Double-click **`Install Fontaid.bat`**.
 3. Click **Yes** on the Windows permission prompt (it needs this once, to install
-   the build tools properly — Fontaid itself never needs admin rights to run).
+   the build tools properly. Fontaid itself never needs admin rights to run).
 4. If Python isn't on your PC yet, the installer will open the official
    python.org download page for you. Install Python (check **"Add python.exe
    to PATH"** on the install screen), then double-click `Install Fontaid.bat`
    again.
 5. Wait about a minute while it builds. When it's done, you'll have a real
-   **`fontaid.exe`** sitting on your Desktop — double-click it any time to
+   **`fontaid.exe`** sitting on your Desktop. Double-click it any time to
    run Fontaid. No Python knowledge needed after this point.
 
 You can delete `Install Fontaid.bat`, `fontaid.py`, and `requirements.txt`
